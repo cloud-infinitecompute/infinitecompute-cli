@@ -110,7 +110,7 @@ def sync_detailed(
 ) -> Response[AuditEventPage | ErrorResponse]:
     """List Audit Events
 
-     Who changed what in this project, newest first (lab owners' keys only)
+     Who changed what in this project, newest first (project owners' keys only)
 
     Args:
         person (None | str | Unset): Only this user id's actions
@@ -156,7 +156,7 @@ def sync(
 ) -> AuditEventPage | ErrorResponse | None:
     """List Audit Events
 
-     Who changed what in this project, newest first (lab owners' keys only)
+     Who changed what in this project, newest first (project owners' keys only)
 
     Args:
         person (None | str | Unset): Only this user id's actions
@@ -197,7 +197,7 @@ async def asyncio_detailed(
 ) -> Response[AuditEventPage | ErrorResponse]:
     """List Audit Events
 
-     Who changed what in this project, newest first (lab owners' keys only)
+     Who changed what in this project, newest first (project owners' keys only)
 
     Args:
         person (None | str | Unset): Only this user id's actions
@@ -241,7 +241,7 @@ async def asyncio(
 ) -> AuditEventPage | ErrorResponse | None:
     """List Audit Events
 
-     Who changed what in this project, newest first (lab owners' keys only)
+     Who changed what in this project, newest first (project owners' keys only)
 
     Args:
         person (None | str | Unset): Only this user id's actions

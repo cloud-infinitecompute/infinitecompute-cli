@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "infinitecompute"
 version = "0.1.0"
-description = "ic: the Infinite Compute command line (not yet published)"
+description = "ic: the Infinite Compute command line"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
