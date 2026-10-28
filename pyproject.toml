@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "infinitecompute"
+version = "0.1.0"
+description = "ic: the Infinite Compute command line (not yet published)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx>=0.27",
+  "attrs>=23.1",
+  "python-dateutil>=2.8",
+  "typer>=0.12",
+  "keyring>=24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "openapi-python-client==0.29.1"]
+
+[project.scripts]
+ic = "infinitecompute.cli:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/infinitecompute"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+extend-exclude = ["src/infinitecompute/_api"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008"]  # typer options as argument defaults
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
