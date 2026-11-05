@@ -1,0 +1,10 @@
+# Secret scan config (INF-352). Default gitleaks rules, minus paths that only hold
+# test fixtures or build output, which match the generic rules without being secrets.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "test fixtures and build output"
+paths = [
+  '''(^|/)tests/''',
+]
